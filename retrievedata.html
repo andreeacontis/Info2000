@@ -1,0 +1,11 @@
+{%extends "base.html" %}
+{% block title %}{% endblock %}
+{% block content %}
+<h3>Select Category to retrieve from database: 
+    <form action="/data" method = 'GET'>
+        <input type="product_category" placeholder = "leave blank to print all", type = "text"/><br>
+        <input type="submit" value = "submit"/>
+    </form> </h3>
+    
+
+{% endblock %}
