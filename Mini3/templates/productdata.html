@@ -1,0 +1,22 @@
+{%extends "base.html" %}
+{% block title %}{% endblock %}
+{% block content %}
+<h2>Enter Product Data</h2>
+
+<ul>
+{% for item in data %}
+<li>{{item.product_category}},{{item.product_description}},{{item.price}},{{item.product_code}}</li>
+</ul>
+{% endfor %}
+<br/>
+
+<form action = "/product " method = "post" enctype = "multipart/form-data">
+    Product Category: <input type="text" name="product_category"/><br>
+    Product Description: <input type="text" name="product_description"/><br>
+    Price: <input type="text" name="price"/><br>
+    Product Code: <input type="text" name="product_code"/><br>
+    <input type="submit" value ="Submit Data"/>
+</form>
+
+
+{% endblock %}
