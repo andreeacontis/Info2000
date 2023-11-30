@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Choose Model</title>
+</head>
+<body>
+    <h1>WELCOME</h1>
+
+
+    <h2>Choose a Model</h2>
+
+    <p> Vision Transformer (ViT) breaks down an image into patches and finds dependencies in an image for it to classify to a specific label. </p>
+    <p> You Only Look Once (Yolo) is designed for object detection where it locates and assigns labels to objects in the image with a probability associated to the prediction. </p>
+        
+    <form action="/model" method="post">
+        <label for="model">Select a model:</label>
+        <select id="model" name="model">
+            <option value="ViT Model">ViT Model</option> 
+            <option value="Yolo Model">Yolo Model</option> 
+            </select>
+        <input type="submit" value="Next">
+        
+    </form>
+</body>
+</html>
+
+

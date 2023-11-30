@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ViT</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>ViT Model Prediction </h1>
+    
+    <img src="{{ image_path }}" alt="Processed Image">
+
+    <p> Vision Transformer (ViT) breaks down an image into patches and finds dependencies in an image for it to classify to a specific label. </p>
+
+    <p>Prediction: {{ prediction }}</p>
+
+    <form action="/" method="get">
+        <button type="submit">Go back to model selection</button>
+    </form>
+</body>
+</html>
+
+

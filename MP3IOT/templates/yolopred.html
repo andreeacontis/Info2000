@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yolo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Yolo Model Prediction</h1>
+    
+    <img src="{{ image_path }}" alt="Processed Image">
+
+    <p> You Only Look Once (Yolo) is designed for object detection where it locates and assigns labels to objects in the image with a probability associated to the prediction. </p>
+    
+    <p>Predicted Classes:</p>
+    <ul>
+        {% for cls in predclass %}
+            {{ cls }}<br>
+        {% endfor %}
+    </ul>
+
+    <form action="/" method="get">
+        <button type="submit">Go back to model selection</button>
+    </form>
+</body>
+</html>
